@@ -24,14 +24,19 @@
 			else{
 				var player = request.get(this.baseURL + "/api/lol/" + this.region + "/v1.4/summoner/by-name/" + key +"/?api_key=" + this.auth);
 			}
-			var keyName = Object.keys(player)[0];
-			var playerData = player[keyName];
-			this.id = playerData.id;
-			playerData._instance = this;
-			playerData.masteries = this.getMasteries;
-			playerData.runes = this.getRunes;
-			playerData.summary = this.getSummary;
-			return playerData;
+			if(player){
+				var keyName = Object.keys(player)[0];
+				var playerData = player[keyName];
+				this.id = playerData.id;
+				playerData._instance = this;
+				playerData.masteries = this.getMasteries;
+				playerData.runes = this.getRunes;
+				playerData.summary = this.getSummary;
+				return playerData;
+			}
+			else{
+				return false;
+			}
 		},
 		getMasteries: function(playerID){
 			if(!playerID){
