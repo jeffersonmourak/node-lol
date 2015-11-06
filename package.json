@@ -1,0 +1,28 @@
+{
+  "name": "node-lol",
+  "version": "0.0.1",
+  "description": "wrapper for League Of Legends API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonmourak/node-lol.git"
+  },
+  "keywords": [
+    "lol",
+    "league-of-legends",
+    "nodejs",
+    "node-lol"
+  ],
+  "author": "jeffersonmourak <jefinho.moura14@gmail.com> (http://jeffersonmourak.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffersonmourak/node-lol/issues"
+  },
+  "homepage": "https://github.com/jeffersonmourak/node-lol#readme",
+  "dependencies": {
+    "sync-request": "^2.1.0"
+  }
+}
